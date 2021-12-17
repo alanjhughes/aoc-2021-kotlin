@@ -1,8 +1,4 @@
 fun main() {
-    fun reduceValues(input: List<Int>): Int {
-        return input.windowed(2).count { (a, b) -> b > a }
-    }
-
     fun part1(input: List<Int>): Int {
         return reduceValues(input)
     }
@@ -19,5 +15,9 @@ fun main() {
     val input = readInput("Day01").map { it.toInt() }
     println(part1(input))
     println(part2(input))
+}
+
+fun reduceValues(input: List<Int>): Int {
+    return input.windowed(2).count { (a, b) -> b > a }
 }
 
